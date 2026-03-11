@@ -1,0 +1,24 @@
+//create user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name" : "shobu",
+    "email" : "shobu@gmail.com",
+    "dateOfBirth" : "2005-12-28",
+    "mobileNumber" : "9989",
+    "status": "true"
+}
+
+
+### Read all users
+GET http://localhost:4000/user-api/users
+
+### Read user by ID
+GET http://localhost:4000/user-api/users/69a68dc8e53f83789fe94f49
+
+### Delete user by id (soft delete)
+DELETE  http://localhost:4000/user-api/users/69a68dc8e53f83789fe94f49
+
+### Activate the user
+PATCH http://localhost:4000/user-api/users/69a68c487832651bd2b575c0
